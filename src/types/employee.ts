@@ -7,8 +7,11 @@ export interface Employee {
   hireDate?: string;
 }
 
-export interface EmployeeResponse {
+export interface ApiResponse<T = any> {
   code: number;
   message: string;
-  data: Employee[];
+  data: T;
 }
+
+export type EmployeeListResponse = ApiResponse<Employee[]>;
+export type EmployeeDetailResponse = ApiResponse<Employee>;

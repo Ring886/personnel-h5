@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+// No imports needed due to auto-import (vue-router)
+import { useTheme } from '@/composables/useTheme';
+
+// Initialize theme logic globally
+useTheme();
 </script>
 
 <template>
   <RouterView />
 </template>
-
-<style>
-#app {
-  width: 100%;
-}
-</style>

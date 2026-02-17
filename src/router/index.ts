@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
+// No imports needed due to auto-import (vue-router)
+import type { RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -7,6 +8,22 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/HomeView.vue'),
     meta: {
       title: '首页',
+    },
+  },
+  {
+    path: '/add',
+    name: 'AddEmployee',
+    component: () => import('@/views/EmployeeForm.vue'),
+    meta: {
+      title: '新增员工',
+    },
+  },
+  {
+    path: '/edit/:id',
+    name: 'EditEmployee',
+    component: () => import('@/views/EmployeeForm.vue'),
+    meta: {
+      title: '编辑员工',
     },
   },
   {

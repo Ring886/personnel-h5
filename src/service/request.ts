@@ -2,7 +2,7 @@ import axios, { type AxiosInstance, type AxiosRequestConfig, type AxiosResponse 
 import { type ApiResponse } from '@/types/api';
 
 const config: AxiosRequestConfig = {
-  baseURL: '/api', // 使用代理配置的路径
+  // baseURL: '/api', // Removed to allow full URL control in urls.ts
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
